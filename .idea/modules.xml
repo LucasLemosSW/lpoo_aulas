@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/exercicio_herencaSimples_10_11_22/exercicio_herencaSimples_10_11_22.iml" filepath="$PROJECT_DIR$/exercicio_herencaSimples_10_11_22/exercicio_herencaSimples_10_11_22.iml" />
       <module fileurl="file://$PROJECT_DIR$/lpoo_aulas.iml" filepath="$PROJECT_DIR$/lpoo_aulas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/objetivo1/objetivo1.iml" filepath="$PROJECT_DIR$/objetivo1/objetivo1.iml" />
     </modules>
   </component>
 </project>
