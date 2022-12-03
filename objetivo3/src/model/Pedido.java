@@ -28,6 +28,10 @@ public class Pedido {
         this.produtos = produtos;
     }
 
+    public void setEstado(Tipo estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
         return "\nPedido{" +

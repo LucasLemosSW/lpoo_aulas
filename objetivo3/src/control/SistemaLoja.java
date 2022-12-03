@@ -49,10 +49,5 @@ public class SistemaLoja {
 
         System.out.println(produtos);
 
-
-
-
-
-
     }
 }

@@ -17,13 +17,16 @@ public class Vendedor extends Funcionario{
         pedidos.add(pedido1);
 
         // baixa estoque
-        System.out.println("baixa estoque");
-
-        pedido1.itens.forEach(item -> System.out.println(item.produto.getQuantidade()));
+//        System.out.println("baixa estoque");
+//        pedido1.itens.forEach(item -> System.out.println(item.produto.getQuantidade()));
 
         pedido1.itens.forEach(item-> item.produto.setQuantidade(item.produto.getQuantidade()-(int) item.getQuantidade()));
 
-        pedido1.itens.forEach(item -> System.out.println(item.produto.getQuantidade()));
+//        pedido1.itens.forEach(item -> System.out.println(item.produto.getQuantidade()));
+
+        //Altera estado do pedido
+        pedido1.setEstado(Tipo.ATENDIDO);
+
 
     }
 
@@ -38,7 +41,7 @@ public class Vendedor extends Funcionario{
     public String toString() {
         return "Vendedor{" +
                 "local='" + local + '\'' +
-                ", pedidos=" + pedidos +
-                '}';
+                "} " + super.toString() +
+                ", pedidos=" + pedidos;
     }
 }
