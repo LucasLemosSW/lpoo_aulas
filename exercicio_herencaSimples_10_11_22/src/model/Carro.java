@@ -4,10 +4,13 @@ public class Carro extends Veiculo implements Automovel{
 
     int capacidadePortaMalas;
 
+
+
     public Carro(int numeroDeeixos, String propulsao, String marca, String modelo, int anoFrabricacao, int capacidadePortaMalas) {
         super(numeroDeeixos, propulsao, marca, modelo, anoFrabricacao);
         this.capacidadePortaMalas = capacidadePortaMalas;
     }
+
 
     public int getCapacidadePortaMalas() {
         return capacidadePortaMalas;
