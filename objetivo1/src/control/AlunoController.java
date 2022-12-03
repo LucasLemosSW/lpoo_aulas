@@ -67,30 +67,34 @@ public class AlunoController {
         aluno3.setId(3);
         aluno4.setId(4);
 
-        System.out.println("imprimindo Usando List");
+        System.out.println("\nimprimindo Usando List");
         System.out.println(AlunosList.stream().sorted(Comparator.comparing(Aluno::getId)).collect(Collectors.toList()));
 
+        System.out.println("\nItem de id = 5");
         System.out.println(AlunosList.stream().filter(p -> p.getId() == 5).collect(Collectors.toList()));
 
+        System.out.println("\nOrdem decrescente");
         AlunosList.sort(Comparator.comparing(Aluno::getId).reversed());
         System.out.println(AlunosList);
 
-        System.out.println("imprimindo Usando Map");
+        System.out.println("\nimprimindo Usando Map");
 
-        Map<Aluno, Integer> AlunosMap = new HashMap<Aluno, Integer>();
+//        Map<Aluno, Integer> AlunosMap = new HashMap<Aluno, Integer>();
+        Map<Integer,Aluno> AlunosMap = new HashMap<>();
 
-        AlunosMap.put(aluno1, 0);
-        AlunosMap.put(aluno2, 1);
-        AlunosMap.put(aluno3, 2);
-        AlunosMap.put(aluno4, 3);
-        AlunosMap.put(aluno5, 4);
-        AlunosMap.put(aluno6, 5);
+        AlunosMap.put(aluno1.getId(),aluno1);
+        AlunosMap.put(aluno2.getId(),aluno2);
+        AlunosMap.put(aluno3.getId(),aluno3);
+        AlunosMap.put(aluno4.getId(),aluno4);
+        AlunosMap.put(aluno5.getId(),aluno5);
+        AlunosMap.put(aluno6.getId(),aluno6);
 
-        System.out.println(AlunosMap.);
+        System.out.println(AlunosMap);
 
+        System.out.println("\nItem de id = 5");
+        System.out.println(AlunosMap.get(5));
 
-
-
+        System.out.println("\nordenando a coleçao do tipo Map (operação proibida, pois mudaria o conteúdo indexado pela função hash)");
 
     }
 }

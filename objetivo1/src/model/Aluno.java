@@ -2,11 +2,11 @@ package model;
 
 public class Aluno {
 
-    int id;
-    int cpf;
-    String nome;
-    String sobrenome;
-    String email;
+    private int id;
+    private int cpf;
+    private String nome;
+    private String sobrenome;
+    private String email;
 
     public Aluno() {
     }
