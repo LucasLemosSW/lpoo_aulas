@@ -9,8 +9,9 @@ public class Pedido {
     private Date data;
     private double valor;
 
+    Vendedor vendedorPedido;
+
     List<Item> itens;
-    List<Produto> produtos;
 
     Tipo estado = Tipo.PENDENTE;
 
@@ -20,12 +21,12 @@ public class Pedido {
         return true;
     }
 
-    public Pedido(int numero, Date data, double valor, List<Item> itens) {
+    public Pedido(int numero, Date data, double valor, List<Item> itens,Vendedor vendedorPedido) {
         this.numero = numero;
         this.data = data;
         this.valor = valor;
         this.itens = itens;
-        this.produtos = produtos;
+        this.vendedorPedido = vendedorPedido;
     }
 
     public void setEstado(Tipo estado) {

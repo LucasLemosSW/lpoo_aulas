@@ -10,10 +10,14 @@ public class Vendedor extends Funcionario{
 
     List<Pedido> pedidos = new ArrayList<>();
 
-    public void realizarPedido(List<Item> itens,double valor){
+    public void realizarPedido(List<Item> itens){
+
+        double valor = itens.stream() //1
+                .mapToDouble(i -> i.getQuantidade() * i.produto.getPreco()) //2
+                .sum();
 
         Date data = new Date();
-        Pedido pedido1 = new Pedido(1,data,150,itens);
+        Pedido pedido1 = new Pedido(1,data,valor,itens,this);
         pedidos.add(pedido1);
 
         // baixa estoque
@@ -27,8 +31,9 @@ public class Vendedor extends Funcionario{
         //Altera estado do pedido
         pedido1.setEstado(Tipo.ATENDIDO);
 
-
     }
+
+    public void realizarvenda(List<Pedido> pedido){}
 
     public void consultarPreco(){ }
 

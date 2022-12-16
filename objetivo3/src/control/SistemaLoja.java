@@ -31,11 +31,6 @@ public class SistemaLoja {
         fornecimentos.add(fornecimento_1);
         fornecimentos.add(fornecimento_2);
 
-        System.out.println("\nForncedimentos:");
-        System.out.println(fornecimentos);
-
-        System.out.println("\nVendas:");
-
         Item item_1= new Item(1,0,5,camisa);
         Item item_2= new Item(2,0,1,calca);
 
@@ -43,11 +38,24 @@ public class SistemaLoja {
         itens.add(item_1);
         itens.add(item_2);
 
-        vendedor1.realizarPedido(itens,300);
+        vendedor1.realizarPedido(itens);
+
+//        mythrowException();
 
         System.out.println(vendedor1);
 
         System.out.println(produtos);
 
+    }
+
+    private static void mythrowException() {
+        try { //try-catch é um único comando, deve vir juntos
+            System.out.println("Tentou executar o bloco try, mas lança a MinhaExcecao");
+            throw new EstoqueInsuficienteException(); // gera a exceção
+        } catch (EstoqueInsuficienteException e) { // pega a exceção lançada no bloco try
+            //e.printStackTrace(); //imprime a stack de exceção
+        } finally { // executa em qualquer caso, seja resultado da execução do try ou do catch
+            System.err.println("Finally executado em mythrowException()");
+        }
     }
 }
