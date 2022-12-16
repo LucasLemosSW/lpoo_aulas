@@ -2,9 +2,12 @@ package model;
 
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
 
 public class Pedido {
 
+    private static final AtomicInteger count = new AtomicInteger(0);
     private int numero;
     private Date data;
     private double valor;
@@ -21,8 +24,8 @@ public class Pedido {
         return true;
     }
 
-    public Pedido(int numero, Date data, double valor, List<Item> itens,Vendedor vendedorPedido) {
-        this.numero = numero;
+    public Pedido( Date data, double valor, List<Item> itens,Vendedor vendedorPedido) {
+        this.numero =  count.incrementAndGet();
         this.data = data;
         this.valor = valor;
         this.itens = itens;
@@ -35,7 +38,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "\nPedido{" +
+        return "\nPedido -->{" +
                 "numero=" + numero +
                 ", data=" + data +
                 ", valor=" + valor +
@@ -43,4 +46,5 @@ public class Pedido {
                 ", estado=" + estado +
                 '}';
     }
+
 }

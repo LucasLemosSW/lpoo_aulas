@@ -25,7 +25,7 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario{" +
+        return "\nFuncionario{" +
                 "matricula=" + matricula +
                 ", nome='" + nome + '\'' +
                 ", endereco='" + endereco + '\'' +

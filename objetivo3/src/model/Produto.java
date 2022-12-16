@@ -29,6 +29,14 @@ public class Produto {
         return preco;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
     public int getQuantidade() {
         return quantidade;
     }

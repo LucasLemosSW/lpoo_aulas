@@ -21,7 +21,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "\nItem{" +
                 "codItem=" + codItem +
                 ", desconto=" + desconto +
                 ", quantidade=" + quantidade +
